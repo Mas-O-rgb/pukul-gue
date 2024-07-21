@@ -1,0 +1,59 @@
+body {
+  background-color: orange;
+  bottom: 30px;
+}
+
+h1, h2 {
+  font-size: 60px;
+  text-align: center;
+  font-family: Arial;
+  margin: 10px;
+}
+
+button {
+  display: block;
+  margin: auto;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+  cursor: url(../img/celurit_1.png), auto;
+}
+
+.container:active{
+  cursor: url(../img/celurit_2.png), auto;
+}
+
+.semak {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+
+.semak::after {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 150px;
+  background: url(../img/semak_3.png) bottom center no-repeat;
+  background-size: 110%;
+  position: absolute;
+  bottom: -45px;
+}
+
+.oki {
+  width: 100%;
+  height: 90%;
+  background: url(../img/OKI_2.png) bottom center no-repeat;
+  background-size: 50%;
+  position: absolute;
+  top: 100px;
+  transition: top 0.3s;
+}
+
+.semak.muncul .oki {
+  top: -10px;
+}
